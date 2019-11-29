@@ -17,7 +17,7 @@ jobs:
         token: ${{ secrets.PERSONAL_TOKEN }}
 
     - name: hoge
-      uses: ../actions/hoge
+      uses: ./.github/actions/hoge
 
     - name: huga
-      uses: ../actions/huga
+      uses: ./.github/actions/huga
