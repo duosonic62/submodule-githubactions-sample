@@ -12,6 +12,9 @@ jobs:
     steps:
     - name: checkout with submodule
       uses: actions/checkout@v1
+      with:
+        submodules: true
+        token: ${{ secrets.PERSONAL_TOKEN }}
 
     - name: hoge
       uses: ../actions/hoge
