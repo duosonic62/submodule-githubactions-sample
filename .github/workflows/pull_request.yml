@@ -1,0 +1,23 @@
+name: Using Private Repositroy Sample
+
+on:
+  pull_request:
+    branches:
+    - master
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: checkout with submodule
+      uses: actions/checkout@v1
+      with:
+        submodules: true
+        token: ${{ secrets.PERSONAL_ACCESSTOKEN }}
+
+    - name: hoge
+      uses: ./.github/actions/hoge
+
+    - name: huga
+      uses: ./.github/actions/huga
